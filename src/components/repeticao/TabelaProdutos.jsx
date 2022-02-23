@@ -1,17 +1,19 @@
 import React from "react";
 import produtos from "../../data/produtos"
+import './TabelaProdutos.css'
 
 export default props => {
-    const results = produtos.map((produto) => {
-       return  <tr>
-                    <td>{produto.id}</td>
-                    <td>{produto.nome}</td>
-                    <td>R$ {produto.preco}</td>
-                </tr>
-    })
-    console.log(results);
+    function getProdutos(){
+        return produtos.map((produto, i) => {
+            return  <tr key={produto.id} className={i % 2 == 0 ? 'Par' : ''}>
+                         <td>{produto.id}</td>
+                         <td>{produto.nome}</td>
+                         <td>R$ {produto.preco.toFixed(2).replace('.', ',')}</td>
+                     </tr>
+         })   
+    }  
     return(
-        <table style={{ width: "100%" }}>  
+        <table className="Tabela">  
             <thead>
                 <tr>
                     <th>ID</th>
@@ -20,7 +22,7 @@ export default props => {
                 </tr>  
             </thead>                  
             <tbody>
-                {results}
+                {getProdutos()}
             </tbody>
         </table>
     );

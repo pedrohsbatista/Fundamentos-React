@@ -1,0 +1,12 @@
+.Tabela{
+    width: 100%;
+}
+
+.Tabela th{
+    background-color: #000;
+    color: #fff;
+}
+
+.Tabela .Par{
+    background-color: #CCD1D1;    
+}
