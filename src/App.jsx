@@ -1,6 +1,8 @@
 import './App.css';
 import React from 'react'
 
+import UsuarioInfo from './components/condicional/UsuarioInfo';
+import ParOuImpar from './components/condicional/ParOuImpar';
 import TabelaProdutos from './components/repeticao/TabelaProdutos';
 import ListaAlunos from './components/repeticao/ListaAlunos';
 import Familia from './components/basicos/Familia'
@@ -32,6 +34,13 @@ export default _ =>
         <h1>Fundamentos React</h1>
 
         <div className="Cards">
+            <Card titulo="#08 - Renderização Condicional" color="#982395">
+                <ParOuImpar numero={4}/>
+                <UsuarioInfo usuario={{ nome: "Fernando" }} />
+                <UsuarioInfo usuario={{ email: "fer@email.com" }} />
+                <UsuarioInfo usuario={{ }} />
+                <UsuarioInfo />
+            </Card>
             <Card titulo="#07 - Repetição Produtos" color="#8A2BE2">
                 <TabelaProdutos />
             </Card>
@@ -51,7 +60,7 @@ export default _ =>
             <Card titulo="#03 - Fragmento" color="#E94C6F">
                 <Fragmento />
             </Card>        
-            <Card titulo="#02 -Com Parâmetro" color="#E8B71A">
+            <Card titulo="#02 - Com Parâmetro" color="#E8B71A">
                 <ComParametro
                         titulo="Situação do Aluno"
                         aluno="Pedro Silva"
