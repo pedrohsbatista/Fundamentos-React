@@ -1,14 +1,15 @@
 import './App.css';
 import React from 'react'
 
-import Contador from './components/contador/Contador';
-import Input from './components/formulario/Input';
-import IndiretaPai from './components/comunicacao/IndiretaPai';
-import DiretaPai from './components/comunicacao/DiretaPai';
-import UsuarioInfo from './components/condicional/UsuarioInfo';
-import ParOuImpar from './components/condicional/ParOuImpar';
-import TabelaProdutos from './components/repeticao/TabelaProdutos';
-import ListaAlunos from './components/repeticao/ListaAlunos';
+import Mega from './components/mega/Mega'
+import Contador from './components/contador/Contador'
+import Input from './components/formulario/Input'
+import IndiretaPai from './components/comunicacao/IndiretaPai'
+import DiretaPai from './components/comunicacao/DiretaPai'
+import UsuarioInfo from './components/condicional/UsuarioInfo'
+import ParOuImpar from './components/condicional/ParOuImpar'
+import TabelaProdutos from './components/repeticao/TabelaProdutos'
+import ListaAlunos from './components/repeticao/ListaAlunos'
 import Familia from './components/basicos/Familia'
 import FamiliaMembro from './components/basicos/FamiliaMembro'
 import Card from './components/layout/Card'
@@ -38,6 +39,9 @@ export default _ =>
         <h1>Fundamentos React</h1>
 
         <div className="Cards">
+            <Card titulo="#13 - Desafio Mega" color="#2F846F">
+                <Mega quantidade={6} />
+            </Card>
             <Card titulo="#12 - Contador" color="#424242">
                 <Contador numeroInicial={10}></Contador>
             </Card>
